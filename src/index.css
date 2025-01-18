@@ -13,7 +13,7 @@ form{
 }
 label{
   display: block;
-  padding: 10px 0;
+  padding: 3px 0;
 }
 textarea{
   width:200px;
@@ -30,6 +30,17 @@ textarea{
   border:2px solid black;
   padding-left: 10px;
   font-size: 16px;
+}
+fieldset{
+  margin-top: 20px;
+  padding:10px 0;
+}
+legend{
+  margin-left: 20px;
+  padding:0 5px;
+}
+input[type='radio']{
+  margin: 0 10px;
 }
 button{
   margin-top: 20px;
