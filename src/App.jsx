@@ -5,8 +5,10 @@ export default function App() {
   function signUp(formData){
     const email = formData.get("email")
     const password = formData.get('password')
+    const description = formData.get('description')
     console.log(email)
     console.log(password)
+    console.log(description)
   }
   return (
     <>
@@ -28,6 +30,8 @@ export default function App() {
                 className='input' 
         />
         <br/>
+        <label htmlFor='description'>Description:</label>
+        <textarea id='description' name='description'></textarea>
         <button>Submit</button>
       </form>
 
