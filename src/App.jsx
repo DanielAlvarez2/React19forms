@@ -2,18 +2,15 @@
 
 export default function App() {
 
-  function handleSubmit(event){
-    event.preventDefault()
-    console.log(event.currentTarget)
-    const formEl = event.currentTarget
-    const formData = new formData(formEl)
+  function signUp(formData){
     const email = formData.get("email")
+    const password = formData.get('password')
     console.log(email)
-    formEl.reset()
+    console.log(password)
   }
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form action={signUp}>
         <h1>Signup Form</h1>
 
         <label htmlFor='email'>Email: </label>
