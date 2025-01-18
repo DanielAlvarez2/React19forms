@@ -2,9 +2,18 @@
 
 export default function App() {
 
+  function handleSubmit(event){
+    event.preventDefault()
+    console.log(event.currentTarget)
+    const formEl = event.currentTarget
+    const formData = new formData(formEl)
+    const email = formData.get("email")
+    console.log(email)
+    formEl.reset()
+  }
   return (
     <>
-      <form action='/api/my-server-code.php' method='POST' id='my-form'>
+      <form onSubmit={handleSubmit}>
         <h1>Signup Form</h1>
 
         <label htmlFor='email'>Email: </label>
@@ -12,17 +21,17 @@ export default function App() {
                 id='email' 
                 name='email' 
                 placeholder='name@example.com'
-                class='input' 
+                className='input' 
         />
         <br/>
         <label htmlFor='password'>Password: </label>
         <input  type='password' 
                 id='password' 
                 name='password' 
-                class='input' 
+                className='input' 
         />
         <br/>
-        <input type='submit' />
+        <button>Submit</button>
       </form>
 
     </>
