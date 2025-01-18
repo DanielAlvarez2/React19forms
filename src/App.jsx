@@ -5,16 +5,26 @@ export default function App() {
   return (
     <>
       <form action='/api/my-server-code.php' method='POST' id='my-form'>
-        <label htmlfor='first-name'>First Name: </label>
-        <input type='text' id='first-name' name='firstName' class='input' />
+        <h1>Signup Form</h1>
+
+        <label htmlFor='email'>Email: </label>
+        <input  type='email' 
+                id='email' 
+                name='email' 
+                placeholder='name@example.com'
+                class='input' 
+        />
         <br/>
-        <label htmlfor='last-name'>Last Name: </label>
-        <input type='text' id='last-name' name='lastName' class='input' />
+        <label htmlFor='password'>Password: </label>
+        <input  type='password' 
+                id='password' 
+                name='password' 
+                class='input' 
+        />
         <br/>
         <input type='submit' />
       </form>
 
-      <script src='./index.js'></script>
     </>
   )
 }

@@ -15,9 +15,18 @@ label{
   width:200px;
   margin-bottom: 20px;
   border:2px solid black;
+  padding-left: 10px;
+  font-size: 20px;
 }
 input[type='submit']{
   font-size: 20px;
   padding:10px;
   cursor: pointer;
+}
+input::placeholder{
+  padding-left: 10px;
+  font-size: 15px;
+}
+h1{
+  text-align: center;
 }
