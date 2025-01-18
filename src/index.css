@@ -1,0 +1,23 @@
+form{
+  width:4in;
+  min-height:5in;
+  background: rgb(0, 165, 116);
+  padding:20px;
+  font-family: sans-serif;
+}
+label{
+  display: block;
+  padding: 10px 0;
+}
+.input{
+  border-radius: 20px;
+  height:30px;
+  width:200px;
+  margin-bottom: 20px;
+  border:2px solid black;
+}
+input[type='submit']{
+  font-size: 20px;
+  padding:10px;
+  cursor: pointer;
+}
