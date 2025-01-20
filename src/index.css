@@ -36,6 +36,12 @@ fieldset{
   padding:10px 0;
   width:200px;
 }
+select{
+  min-width:200px;
+}
+#favColorLabel{
+  margin-top: 20px;
+}
 legend{
   margin-left: 20px;
   padding:0 5px;
