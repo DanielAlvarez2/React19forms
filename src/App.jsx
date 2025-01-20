@@ -7,10 +7,12 @@ export default function App() {
     const password = formData.get('password')
     const description = formData.get('description')
     const employmentStatus = formData.get('employmentStatus')
+    const dietaryRestrictions = formData.getAll('dietaryRestrictions')
     console.log(email)
     console.log(password)
     console.log(description)
     console.log(employmentStatus)
+    console.log(dietaryRestrictions)
   }
   return (
     <>
@@ -50,6 +52,23 @@ export default function App() {
             Full-time
           </label>
         </fieldset>
+
+        <fieldset>
+          <legend>Dietary Restrictions:</legend>
+          <label>
+            <input type='checkbox' name='dietaryRestrictions' value='kosher' />
+            Kosher
+          </label>
+          <label>
+            <input type='checkbox' name='dietaryRestrictions' value='vegan' />
+            Vegan
+          </label>
+          <label>
+            <input type='checkbox' name='dietaryRestrictions' value='gluten-free' />
+            Gluten-free
+          </label>
+        </fieldset>
+
 
         <button>Submit</button>
       </form>

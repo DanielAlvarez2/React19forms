@@ -34,12 +34,14 @@ textarea{
 fieldset{
   margin-top: 20px;
   padding:10px 0;
+  width:200px;
 }
 legend{
   margin-left: 20px;
   padding:0 5px;
 }
-input[type='radio']{
+input[type='radio'],
+input[type='checkbox']{
   margin: 0 10px;
 }
 button{
