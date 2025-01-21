@@ -3,18 +3,15 @@
 export default function App() {
 
   function signUp(formData){
-    const email = formData.get("email")
-    const password = formData.get('password')
-    const description = formData.get('description')
-    const employmentStatus = formData.get('employmentStatus')
-    const dietaryRestrictions = formData.getAll('dietaryRestrictions')
-    const favColor = formData.get('favColor')
-    console.log(email)
-    console.log(password)
-    console.log(description)
-    console.log(employmentStatus)
-    console.log(dietaryRestrictions)
-    console.log(favColor)
+    const data = Object.fromEntries(formData) 
+    const dietaryData = formData.getAll('dietaryRestrictions')
+    console.log(data)
+    console.log(dietaryData)
+    const allData = {
+      ...data,
+      dietaryRestrictions: dietaryData
+    }
+    console.log(allData)
   }
   return (
     <>
@@ -72,7 +69,7 @@ export default function App() {
         </fieldset>
 
         <label htmlFor='favColor' id='favColorLabel'>What is your favorite color?</label>
-        <select id='favColor' name='favColor' required>
+        <select id='favColor' name='favColor' required defaultValue=''>
           <option value='' disabled> --- Choose a color --- </option>
           <option value='red'>Red</option>
           <option value='orange'>Orange</option>
